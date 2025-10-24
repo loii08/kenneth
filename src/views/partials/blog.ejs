@@ -1,0 +1,28 @@
+<section id="blog" class="py-20 bg-gray-50 dark:bg-gray-800/50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">From The Blog</h2>
+        <p class="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+            Tips, insights, and stories about productivity and creative work.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <% blog.forEach(post => { %>
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/20">
+                    <div class="p-6 flex-grow">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2"><%= post.date %></p>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-200"><%= post.title %></h3>
+                        <p class="text-gray-600 dark:text-gray-400"><%= post.excerpt %></p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button 
+                            class="read-more-btn font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500"
+                            data-title="<%= post.title %>"
+                            data-date="<%= post.date %>"
+                            data-excerpt="<%= post.excerpt %>"
+                        >Read More &rarr;</button>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
