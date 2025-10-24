@@ -1,4 +1,4 @@
-# Kenneth Irvin Butad - Technical Support Portfolio
+# Kenneth Irvin Butad - Portfolio
 
 A clean, responsive, and accessible single-page portfolio built with Node.js, Express.js, and Tailwind CSS.
 
