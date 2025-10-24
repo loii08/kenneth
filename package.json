@@ -7,7 +7,8 @@
     "start": "node src/server.js",
     "build:css": "tailwindcss -i ./src/public/css/globals.css -o ./src/public/css/output.css --watch",
     "dev:server": "nodemon src/server.js",
-    "dev": "concurrently \"npm:dev:server\" \"npm:build:css\""
+    "dev": "concurrently \"npm:dev:server\" \"npm:build:css\"",
+    "vercel-build": "tailwindcss -i ./src/public/css/globals.css -o ./src/public/css/output.css"
   },
   "keywords": ["portfolio", "nodejs", "express", "tailwind"],
   "author": "Kenneth Irvin Butad",
