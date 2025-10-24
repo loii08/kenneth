@@ -204,6 +204,13 @@ class PortfolioApp {
 
         closeModalBtn.addEventListener('click', closeModal);
         modal.addEventListener('click', (e) => e.target === modal && closeModal());
+
+        // Add keyboard accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
     }
 
     setupProjectFilter() {
