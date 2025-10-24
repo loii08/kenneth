@@ -5,14 +5,14 @@
     "description": "Developed a complete branding package including logo, color palette, and social media templates for a startup, enhancing their visual identity.",
     "techStack": ["Graphic Design", "Branding", "Canva", "Photoshop"],
     "liveDemo": "https://www.behance.net/your-profile",
-    "image": "/images/social-media-6721926_1280.png",
+    "image": "/images/social-media.png",
     "category": "design"
   },
   {
     "id": 2,
     "title": "Promotional Video Edit",
     "description": "Edited a 60-second promotional video for a local business, incorporating client footage, music, and text overlays to create an engaging marketing asset.",
-    "techStack": ["Video Editing", "Motion Graphics", "Premiere Pro"],
+    "techStack": ["Video Editing", "Motion Graphics", "Premiere Pro", "CapCut"],
     "liveDemo": "https://www.youtube.com/watch?v=example",
     "image": "/images/promotional-video.jpg",
     "category": "video"

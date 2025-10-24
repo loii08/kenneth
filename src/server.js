@@ -10,9 +10,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.json());
 
-// Vercel's build process places the 'public' folder at the root.
-const publicPath = path.resolve(__dirname, '..', 'public');
-app.use(express.static(publicPath));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', mainRoutes);
 app.use('/api', apiRoutes);
