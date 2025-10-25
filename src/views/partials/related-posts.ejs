@@ -1,0 +1,26 @@
+<% if (relatedPosts && relatedPosts.length > 0) { %>
+<aside class="mt-16 pt-12 border-t border-gray-200 dark:border-gray-700">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Related Articles</h2>
+    <div class="grid sm:grid-cols-2 gap-8">
+        <% relatedPosts.forEach(post => { %>
+            <a href="/blog/<%= post.slug %>" class="group block bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/20">
+                <img src="<%= post.image %>" alt="Thumbnail for <%= post.title %>" class="h-40 w-full object-cover">
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs px-2 py-1 bg-primary-100 text-primary-600 rounded-full font-medium dark:bg-primary-900/30 dark:text-primary-300">
+                            <%= post.category %>
+                        </span>
+                        <span class="text-xs text-gray-500 dark:text-gray-400 flex items-center">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <%= post.readTime %>
+                        </span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                        <%= post.title %>
+                    </h3>
+                </div>
+            </a>
+        <% }) %>
+    </div>
+</aside>
+<% } %>

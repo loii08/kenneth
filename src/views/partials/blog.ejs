@@ -7,7 +7,7 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <% blog.forEach(post => { %>
-                <div class="group bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/20">
+                <a href="/blog/<%= post.slug %>" class="group block bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/20">
                     <img src="<%= post.image %>" alt="Thumbnail for <%= post.title %>" class="h-48 w-full object-cover">
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-3">
@@ -19,16 +19,14 @@
                                 <%= post.readTime %>
                             </span>
                         </div>
-                        <a href="/blog/<%= post.slug %>">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                                <%= post.title %>
-                            </h3>
-                        </a>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                            <%= post.title %>
+                        </h3>
                         <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                             <%= post.excerpt %>
                         </p>
                     </div>
-                </div>
+                </a>
             <% }) %>
         </div>
     </div>

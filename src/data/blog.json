@@ -1,32 +1,62 @@
 [
   {
     "id": 1,
-    "title": "5 Time-Saving Tools for Every Virtual Assistant",
-    "date": "October 26, 2025",
-    "excerpt": "Boost your productivity with these essential tools that help manage tasks, schedules, and client communication effectively.",
-    "slug": "5-time-saving-tools-for-va",
+    "title": "3 Essential Tools for Virtual Assistant Productivity",
+    "date": "October 26, 2024",
+    "excerpt": "Discover the top 3 tools that can transform your workflow, from task management in Trello to seamless communication in Slack.",
+    "slug": "3-essential-va-tools",
     "category": "Productivity",
-    "readTime": "3 min read",
-    "image": "/images/calendar.jpg"
+    "readTime": "4 min read",
+    "image": "/images/blog-productivity.jpg",
+    "imageAuthor": "Julien Bachelet",
+    "imageAuthorLink": " https://www.pexels.com/photo/closeup-photo-of-white-and-black-printed-ceramic-mug-beside-pastry-907810/"
   },
   {
     "id": 2,
-    "title": "The Beginner's Guide to Creating Stunning Social Media Graphics",
-    "date": "October 15, 2025",
-    "excerpt": "Learn the basic principles of design and how to use tools like Canva to create eye-catching graphics for social media without being a pro designer.",
-    "slug": "guide-to-social-media-graphics",
+    "title": "Canva 101: Designing Professional Graphics in Minutes",
+    "date": "October 15, 2024",
+    "excerpt": "A beginner's guide to leveraging Canva for creating stunning, on-brand social media posts, banners, and marketing materials.",
+    "slug": "canva-101-for-design",
     "category": "Design",
     "readTime": "4 min read",
-    "image": "/images/promotional-video.jpg"
+    "image": "/images/blog-design.jpg",
+    "imageAuthor": "Picjumbo.com",
+    "imageAuthorLink": "https://www.pexels.com/photo/notebook-beside-the-iphone-on-table-196644/"
   },
   {
     "id": 3,
-    "title": "Why Every Business Needs a Virtual Assistant",
-    "date": "October 01, 2025",
-    "excerpt": "Discover how hiring a virtual assistant can streamline your operations, reduce costs, and free up your time to focus on growing your business.",
-    "slug": "why-you-need-a-va",
+    "title": "The Art of the 60-Second Edit: Tips for Engaging Short-Form Video",
+    "date": "October 01, 2024",
+    "excerpt": "Learn key techniques for editing compelling short-form videos for Reels and TikTok, from pacing to adding impactful text overlays.",
+    "slug": "art-of-60-second-edit",
+    "category": "Video",
+    "readTime": "5 min read",
+    "image": "/images/blog-video.jpg",
+    "imageAuthor": "Pixabay",
+    "imageAuthorLink": "https://www.pexels.com/photo/low-angle-view-of-lighting-equipment-on-shelf-257904/"
+  },
+  {
+    "id": 4,
+    "title": "Inbox Zero: How I Manage Client Emails Without the Stress",
+    "date": "September 20, 2024",
+    "excerpt": "A practical guide to email management techniques, including filters, labels, and templates, to keep your client communications organized.",
+    "slug": "inbox-zero-for-vas",
     "category": "VA",
     "readTime": "2 min read",
-    "image": "/images/social-media.png"
+    "image": "/images/blog-email.jpg",
+    "imageAuthor": "Torsten Dettlaff",
+    "imageAuthorLink": "https://www.pexels.com/photo/black-and-gray-digital-device-193003/"
+  },
+  {
+    "id": 5,
+    "title": "From Chaos to Clarity: Setting Up a Client's Trello Board",
+    "date": "September 05, 2024",
+    "excerpt": "A step-by-step walkthrough of how to create an effective Trello board for project management that clients will love to use.",
+    "slug": "setting-up-trello-board",
+    "category": "Productivity",
+    "readTime": "4 min read",
+    "image": "/images/blog-trello.jpg",
+    "imageAuthor": "cottonbro studio",
+    "imageAuthorLink": "https://www.pexels.com/photo/photo-of-a-laptop-screen-7439127/"
   }
 ]

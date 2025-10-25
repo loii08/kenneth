@@ -19,7 +19,15 @@ router.get('/', (req, res) => {
 router.get('/blog/:slug', (req, res) => {
   const post = blog.find(p => p.slug === req.params.slug);
   if (post) {
-    res.render('post', { title: post.title, post: post });
+    // Find up to 2 related posts from the same category, excluding the current one
+    const relatedPosts = blog.filter(
+      p => p.category === post.category && p.id !== post.id
+    ).slice(0, 2);
+
+    const baseUrl = process.env.BASE_URL || `${req.protocol}://${req.get('host')}`;
+    const postUrl = `${baseUrl}${req.originalUrl}`;
+
+    res.render('post', { title: post.title, post: post, relatedPosts: relatedPosts, postUrl: postUrl });
   } else {
     res.status(404).render('404', { title: 'Page Not Found' });
   }
