@@ -145,26 +145,6 @@ class PortfolioApp {
         });
     }
 
-    setupScrollAnimations() {
-        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-        if (!elementsToAnimate || elementsToAnimate.length === 0) return;
-
-        elementsToAnimate.forEach(el => {
-            el.style.opacity = '0';
-        });
-
-        const triggerAnimations = () => {
-            elementsToAnimate.forEach(el => {
-                const animationClass = el.dataset.animation || 'animate-fade-in-up';
-                el.classList.add(animationClass);
-            });
-        };
-
-        window.addEventListener('scroll', triggerAnimations, {
-            once: true
-        });
-    }
-
     setupBlogModal() {
         const modal = document.getElementById('blogModal');
         const modalContent = document.getElementById('blogModalContent');
@@ -297,9 +277,7 @@ window.addEventListener('load', () => {
         preloader.classList.add('loaded'); // Start the fade-out transition
         preloader.addEventListener('transitionend', () => {
             preloader.remove();
-            if (appInstance) { // And then initialize the scroll animations
-                appInstance.setupScrollAnimations(); // Now call the animation setup
-            }
+            
         });
     }
 });
