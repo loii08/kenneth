@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="/css/output.css" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300 font-sans">
+
+    <%- include('partials/post-header') %>
+
+    <main class="relative overflow-hidden">
+        <div class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 relative z-10">
+            <h1 class="text-8xl font-bold text-primary-600 dark:text-primary-400">404</h1>
+            <h2 class="text-4xl font-semibold text-gray-800 dark:text-gray-200 mt-4">Page Not Found</h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-4 max-w-md">
+                Sorry, the page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+            </p>
+            <a href="/" class="mt-8 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                Go Back Home
+            </a>
+        </div>
+
+        <div class="shape top-[10%] left-[15%] h-[150px] w-[150px] [animation-duration:17s]"></div>
+        <div class="shape top-[25%] right-[10%] h-[80px] w-[80px] [animation-duration:20s] [animation-delay:2s]"></div>
+        <div class="shape bottom-[15%] left-[5%] h-[50px] w-[50px] [animation-duration:18s]"></div>
+        <div class="shape bottom-[20%] right-[20%] h-[120px] w-[120px] [animation-duration:22s] [animation-delay:3s]"></div>
+        <div class="shape top-[60%] left-[30%] h-[60px] w-[60px] [animation-duration:16s]"></div>
+        <div class="shape top-[5%] right-[40%] h-[100px] w-[100px] [animation-duration:19s]"></div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script>        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('darkModeToggle');
+            if (!toggle) return;
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+            toggle.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            });
+        });
+    </script>
+</body>
+</html>

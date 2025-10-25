@@ -185,13 +185,13 @@ class PortfolioApp {
             setTimeout(() => {
                 modal.style.opacity = '1';
                 modalContent.style.transform = 'scale(1)';
-            }, 10);
+            }, 10); // Small delay to allow CSS transition
         };
 
         const closeModal = () => {
             modal.style.opacity = '0';
             modalContent.style.transform = 'scale(0.95)';
-            setTimeout(() => modal.classList.add('hidden'), 300);
+            setTimeout(() => modal.classList.add('hidden'), 300); // Match transition duration
         };
 
         readMoreBtns.forEach(btn => {
@@ -202,9 +202,8 @@ class PortfolioApp {
         });
 
         closeModalBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => e.target === modal && closeModal());
+        modal.addEventListener('click', (e) => e.target === modal && closeModal()); // Close modal if user clicks on the background overlay
 
-        // Add keyboard accessibility
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
                 closeModal();
@@ -237,7 +236,6 @@ class PortfolioApp {
             });
         });
 
-        // Add a small delay on load to prevent initial animation flicker
         setTimeout(() => {
             document.getElementById('project-gallery').style.opacity = '1';
         }, 100);
@@ -252,12 +250,11 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        preloader.classList.add('loaded');
-
+        preloader.classList.add('loaded'); // Start the fade-out transition
         preloader.addEventListener('transitionend', () => {
             preloader.remove();
-            if (appInstance) {
-                appInstance.setupScrollAnimations();
+            if (appInstance) { // And then initialize the scroll animations
+                appInstance.setupScrollAnimations(); // Now call the animation setup
             }
         });
     }

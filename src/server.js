@@ -12,14 +12,16 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public'), {
-  maxAge: '1y' // Cache static assets for 1 year
+  maxAge: '1y'
 }));
 
 app.use('/', mainRoutes);
 app.use('/api', apiRoutes);
 
-// This block will only run when you start the server locally (e.g., with `npm run dev`)
-// It will not run when deployed on Vercel.
+app.use((req, res, next) => {
+  res.status(404).render('404', { title: 'Page Not Found' });
+});
+
 if (require.main === module) {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {

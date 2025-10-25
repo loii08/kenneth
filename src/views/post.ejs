@@ -34,7 +34,6 @@
                 <p class="text-gray-500 dark:text-gray-400 text-sm"><%= post.date %></p>
             </header>
 
-            <!-- Featured Image Placeholder -->
             <div class="mb-12 relative">
                 <div class="rounded-lg overflow-hidden shadow-lg ">
                 <img src="<%= post.image %>" alt="Featured image for <%= post.title %>" class="w-full h-auto object-cover md:max-h-[450px]">
@@ -60,7 +59,6 @@
                 <p>Thank you for reading! I hope you found this article helpful. Feel free to reach out if you have any questions or would like to discuss how these strategies can benefit your business.</p>
             </div>
 
-            <!-- Social Share Buttons -->
             <div class="mt-12 flex items-center gap-4">
                 <span class="text-sm font-medium text-gray-600 dark:text-gray-400">Share this post:</span>
                 <div class="flex gap-2">
@@ -91,8 +89,7 @@
 
     <%- include('partials/footer') %>
 
-    <script>
-        // Minimal script for dark mode functionality on post pages
+    <script>        // Minimal script for dark mode functionality on post pages
         document.addEventListener('DOMContentLoaded', () => {
             const toggle = document.getElementById('darkModeToggle');
             if (!toggle) return;

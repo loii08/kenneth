@@ -4,7 +4,7 @@
     "title": "Branding & Social Media Kit",
     "description": "Developed a complete branding package including logo, color palette, and social media templates for a startup, enhancing their visual identity.",
     "techStack": ["Graphic Design", "Branding", "Canva", "Photoshop"],
-    "liveDemo": "https://www.behance.net/your-profile",
+    "liveDemo": "/project-coming-soon",
     "image": "/images/social-media.png",
     "category": "design"
   },
@@ -13,7 +13,7 @@
     "title": "Promotional Video Edit",
     "description": "Edited a 60-second promotional video for a local business, incorporating client footage, music, and text overlays to create an engaging marketing asset.",
     "techStack": ["Video Editing", "Motion Graphics", "Premiere Pro", "CapCut"],
-    "liveDemo": "https://www.youtube.com/watch?v=example",
+    "liveDemo": "/project-coming-soon",
     "image": "/images/promotional-video.jpg",
     "category": "video"
   },
@@ -22,7 +22,7 @@
     "title": "Client Calendar & Email Triage",
     "description": "Managed a busy executive's calendar and inbox, organizing appointments, prioritizing correspondence, and ensuring no critical messages were missed.",
     "techStack": ["Virtual Assistance", "Organization", "Google Workspace", "Asana"],
-    "liveDemo": "#contact",
+    "liveDemo": "/project-coming-soon",
     "image": "/images/calendar.jpg",
     "category": "va"
   }
