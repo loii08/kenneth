@@ -7,7 +7,7 @@ const blog = require('../data/blog.json');
 
 router.get('/', (req, res) => {
   res.render('index', { 
-    title: 'Kenneth Irvin Butad | Professional Virtual Assistant',
+    title: 'Kenneth Irvin Butad | Portfolio',
     projects: projects,
     blog: blog,
     currentYear: new Date().getFullYear()

@@ -166,13 +166,13 @@ class PortfolioApp {
             setTimeout(() => {
                 modal.style.opacity = '1';
                 modalContent.style.transform = 'scale(1)';
-            }, 10); // Small delay to allow CSS transition
+            }, 10);
         };
 
         const closeModal = () => {
             modal.style.opacity = '0';
             modalContent.style.transform = 'scale(0.95)';
-            setTimeout(() => modal.classList.add('hidden'), 300); // Match transition duration
+            setTimeout(() => modal.classList.add('hidden'), 300);
         };
 
         readMoreBtns.forEach(btn => {
@@ -183,7 +183,7 @@ class PortfolioApp {
         });
 
         closeModalBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => e.target === modal && closeModal()); // Close modal if user clicks on the background overlay
+        modal.addEventListener('click', (e) => e.target === modal && closeModal()); 
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
@@ -227,7 +227,7 @@ PortfolioApp.prototype.setupTypewriterAnimation = function() {
     const target = document.getElementById('typewriter-text');
     if (!target) return;
 
-    const roles = ['Virtual Assistant', 'Graphic Designer', 'Video Editor'];
+    const roles = ['Virtual Assistant', 'Graphic Designer', 'Video Editor', 'Web Designer'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
