@@ -46,17 +46,26 @@
             </div>
 
             <div class="prose dark:prose-invert lg:prose-xl max-w-none">
-                <p><%= post.excerpt %></p>
-                <p>This is a placeholder for the full content of the blog post. In a real blog, this would be a much longer article, potentially formatted with Markdown and including various headings, lists, and embedded media.</p>
-                <h2>Why this topic matters</h2>
-                <p>Understanding the nuances of [<%= post.category.toLowerCase() %>] is crucial for any freelancer or business owner looking to optimize their operations. My goal with this post is to provide actionable insights you can implement today.</p>
-                <h3>Key Takeaways</h3>
-                <ul>
-                    <li>Actionable tip one.</li>
-                    <li>Insightful point two.</li>
-                    <li>Practical advice three.</li>
-                </ul>
-                <p>Thank you for reading! I hope you found this article helpful. Feel free to reach out if you have any questions or would like to discuss how these strategies can benefit your business.</p>
+                <% if (post.content && post.content.length > 0) { %>
+                    <% post.content.forEach(block => { %>
+                        <% if (block.type === 'paragraph') { %>
+                            <p><%= block.text %></p>
+                    <% } else if (block.type === 'heading' && block.level === 2) { %>
+                        <h2 class="mt-8"><%= block.text %></h2>
+                    <% } else if (block.type === 'heading' && block.level === 3) { %>
+                        <h3 class="mt-8"><%= block.text %></h3>
+                    <% } else if (block.type === 'list') { %>
+                        <ul class="mt-4">
+                                <% block.items.forEach(item => { %>
+                                    <li><%= item %></li>
+                                <% }) %>
+                            </ul>
+                        <% } %>
+                    <% }) %>
+                <% } else { %>
+                    <p><%= post.excerpt %></p>
+                    <p>Full content coming soon!</p>
+                <% } %>
             </div>
 
             <div class="mt-12 flex items-center gap-4">

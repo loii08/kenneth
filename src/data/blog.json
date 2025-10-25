@@ -20,8 +20,27 @@
     "category": "Design",
     "readTime": "4 min read",
     "image": "/images/blog-design.jpg",
-    "imageAuthor": "Picjumbo.com",
-    "imageAuthorLink": "https://www.pexels.com/photo/notebook-beside-the-iphone-on-table-196644/"
+    "imageAuthor": "Retha Ferguson",
+    "imageAuthorLink": "https://www.pexels.com/@retha-ferguson-105979/",
+    "content": [
+      { "type": "heading", "level": 2, "text": "Why Canva is Ideal for Quick, Professional Design" },
+      { "type": "paragraph", "text": "Canva is a browser-based design platform built for speed and simplicity. You don’t need design experience or expensive software. With thousands of templates and intuitive tools, you can produce high-quality graphics for social media, presentations, marketing, and more." },
+      { "type": "heading", "level": 2, "text": "Step-by-Step: Create a Graphic in Under 10 Minutes" },
+      { "type": "heading", "level": 3, "text": "1. Choose Your Format" },
+      { "type": "paragraph", "text": "Start with a predefined template: Instagram post, flyer, presentation, or custom dimensions." },
+      { "type": "heading", "level": 3, "text": "2. Pick a Template or Start from Scratch" },
+      { "type": "paragraph", "text": "Use Canva’s searchable template library. Templates are fully editable change colors, fonts, layout, and images." },
+      { "type": "heading", "level": 3, "text": "3. Customize Your Design" },
+      { "type": "list", "items": ["Drag and drop elements from the sidebar.", "Upload your own images or use Canva’s free stock library.", "Add text boxes, shapes, icons, and charts.", "Apply brand colors and fonts using the Brand Kit (Pro feature)."] },
+      { "type": "heading", "level": 3, "text": "4. Use Smart Tools to Polish" },
+      { "type": "list", "items": ["Background remover (Pro) for clean cutouts.", "Magic Resize to adapt designs to multiple formats.", "AI-powered text suggestions and layout guides."] },
+      { "type": "heading", "level": 3, "text": "5. Download or Share Instantly" },
+      { "type": "paragraph", "text": "Export in PNG, JPG, PDF, or MP4. Share directly to social platforms or schedule posts with Canva’s content planner." },
+      { "type": "heading", "level": 2, "text": "Tips for Better Results" },
+      { "type": "list", "items": ["Stick to 2–3 font styles per design.", "Use high-contrast color combinations for readability.", "Align elements consistently using Canva’s snap guides.", "Save reusable templates for future projects."] },
+      { "type": "heading", "level": 2, "text": "Final Thought" },
+      { "type": "paragraph", "text": "You don’t need to be a designer to produce professional graphics. With Canva, speed and quality go hand in hand. Try creating a post or flyer today your first design will likely take less than 10 minutes." }
+    ]
   },
   {
     "id": 3,
