@@ -4,20 +4,29 @@
     "title": "5 Time-Saving Tools for Every Virtual Assistant",
     "date": "October 26, 2025",
     "excerpt": "Boost your productivity with these essential tools that help manage tasks, schedules, and client communication effectively.",
-    "slug": "5-time-saving-tools-for-va"
+    "slug": "5-time-saving-tools-for-va",
+    "category": "Productivity",
+    "readTime": "3 min read",
+    "image": "/images/calendar.jpg"
   },
   {
     "id": 2,
     "title": "The Beginner's Guide to Creating Stunning Social Media Graphics",
     "date": "October 15, 2025",
     "excerpt": "Learn the basic principles of design and how to use tools like Canva to create eye-catching graphics for social media without being a pro designer.",
-    "slug": "guide-to-social-media-graphics"
+    "slug": "guide-to-social-media-graphics",
+    "category": "Design",
+    "readTime": "4 min read",
+    "image": "/images/promotional-video.jpg"
   },
   {
     "id": 3,
     "title": "Why Every Business Needs a Virtual Assistant",
     "date": "October 01, 2025",
     "excerpt": "Discover how hiring a virtual assistant can streamline your operations, reduce costs, and free up your time to focus on growing your business.",
-    "slug": "why-you-need-a-va"
+    "slug": "why-you-need-a-va",
+    "category": "VA",
+    "readTime": "2 min read",
+    "image": "/images/social-media.png"
   }
 ]

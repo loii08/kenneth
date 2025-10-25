@@ -16,4 +16,13 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/blog/:slug', (req, res) => {
+  const post = blog.find(p => p.slug === req.params.slug);
+  if (post) {
+    res.render('post', { title: post.title, post: post });
+  } else {
+    res.status(404).render('404', { title: 'Page Not Found' });
+  }
+});
+
 module.exports = router;

@@ -10,7 +10,6 @@ class PortfolioApp {
         this.setupActiveSection();
         this.setupBackToTopButton();
         this.setupScrollEffects();
-        this.setupBlogModal();
         this.setupProjectFilter();
     }
 

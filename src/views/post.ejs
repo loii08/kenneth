@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Kenneth Irvin Butad</title>
+    <meta name="description" content="<%= post.excerpt %>">
+    <meta name="author" content="Kenneth Butad">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="/css/output.css" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300 font-sans">
+
+    <%- include('partials/post-header') %>
+
+    <main>
+        <article class="container mx-auto px-6 py-20 sm:py-32 max-w-3xl">
+            <header class="mb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-sm px-3 py-1 bg-primary-100 text-primary-600 rounded-full font-medium dark:bg-primary-900/30 dark:text-primary-300">
+                        <%= post.category %>
+                    </span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400 flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <%= post.readTime %>
+                    </span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 leading-tight"><%= post.title %></h1>
+                <p class="text-gray-500 dark:text-gray-400 text-sm"><%= post.date %></p>
+            </header>
+
+            <!-- Featured Image Placeholder -->
+            <div class="mb-12 rounded-lg overflow-hidden shadow-lg">
+                <img src="<%= post.image %>" alt="Featured image for <%= post.title %>" class="w-full h-auto object-cover">
+            </div>
+
+            <div class="prose dark:prose-invert lg:prose-xl max-w-none">
+                <p><%= post.excerpt %></p>
+                <p>This is a placeholder for the full content of the blog post. In a real blog, this would be a much longer article, potentially formatted with Markdown and including various headings, lists, and embedded media.</p>
+                <h2>Why this topic matters</h2>
+                <p>Understanding the nuances of [<%= post.category.toLowerCase() %>] is crucial for any freelancer or business owner looking to optimize their operations. My goal with this post is to provide actionable insights you can implement today.</p>
+                <h3>Key Takeaways</h3>
+                <ul>
+                    <li>Actionable tip one.</li>
+                    <li>Insightful point two.</li>
+                    <li>Practical advice three.</li>
+                </ul>
+                <p>Thank you for reading! I hope you found this article helpful. Feel free to reach out if you have any questions or would like to discuss how these strategies can benefit your business.</p>
+            </div>
+
+            <div class="mt-12">
+                <button id="backToBlogBtn" class="w-full sm:w-auto bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300 sm:bg-transparent sm:text-primary-600 sm:dark:text-primary-400 sm:p-0 sm:hover:text-primary-700 sm:dark:hover:text-primary-500">
+                    &larr; Back to Blog
+                </button>
+            </div>
+        </article>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script>
+        // Minimal script for dark mode functionality on post pages
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('darkModeToggle');
+            if (!toggle) return;
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+
+            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+
+            toggle.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            });
+
+            const backBtn = document.getElementById('backToBlogBtn');
+            if (backBtn) {
+                backBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (history.length > 1) {
+                        history.back();
+                    } else {
+                        window.location.href = '/#blog';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
