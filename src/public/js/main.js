@@ -145,53 +145,6 @@ class PortfolioApp {
         });
     }
 
-    setupBlogModal() {
-        const modal = document.getElementById('blogModal');
-        const modalContent = document.getElementById('blogModalContent');
-        const closeModalBtn = document.getElementById('closeModalBtn');
-        const readMoreBtns = document.querySelectorAll('.read-more-btn');
-
-        if (!modal || !closeModalBtn || readMoreBtns.length === 0) return;
-
-        const modalTitle = document.getElementById('modalTitle');
-        const modalDate = document.getElementById('modalDate');
-        const modalBody = document.getElementById('modalBody');
-
-        const openModal = (title, date, excerpt) => {
-            modalTitle.textContent = title;
-            modalDate.textContent = date;
-            modalBody.innerHTML = `<p>${excerpt}</p><p class="mt-4">Full content would appear here in a complete implementation.</p>`;
-            
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.style.opacity = '1';
-                modalContent.style.transform = 'scale(1)';
-            }, 10);
-        };
-
-        const closeModal = () => {
-            modal.style.opacity = '0';
-            modalContent.style.transform = 'scale(0.95)';
-            setTimeout(() => modal.classList.add('hidden'), 300);
-        };
-
-        readMoreBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const { title, date, excerpt } = btn.dataset;
-                openModal(title, date, excerpt);
-            });
-        });
-
-        closeModalBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => e.target === modal && closeModal()); 
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                closeModal();
-            }
-        });
-    }
-
     setupProjectFilter() {
         const filterContainer = document.getElementById('project-filters');
         if (!filterContainer) return;
