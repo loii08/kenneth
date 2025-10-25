@@ -8,7 +8,8 @@
     "build:css": "tailwindcss -i ./src/public/css/globals.css -o ./src/public/css/output.css --watch",
     "dev:server": "nodemon src/server.js",
     "dev": "concurrently \"npm:dev:server\" \"npm:build:css\"",
-    "vercel-build": "tailwindcss -i ./src/public/css/globals.css -o ./src/public/css/output.css"
+    "build": "tailwindcss -i ./src/public/css/globals.css -o ./src/public/css/output.css --minify",
+    "vercel-build": "npm run build"
   },
   "keywords": [
     "portfolio",

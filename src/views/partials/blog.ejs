@@ -8,7 +8,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <% blog.forEach(post => { %>
                 <a href="/blog/<%= post.slug %>" class="group block bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/20">
-                    <img src="<%= post.image %>" alt="Thumbnail for <%= post.title %>" class="h-48 w-full object-cover">
+                    <img src="<%= post.image %>" alt="Thumbnail for <%= post.title %>" class="h-48 w-full object-cover" loading="lazy">
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-3">
                             <span class="text-xs px-2 py-1 bg-primary-100 text-primary-600 rounded-full font-medium dark:bg-primary-900/30 dark:text-primary-300">
