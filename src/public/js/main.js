@@ -10,6 +10,7 @@ class PortfolioApp {
         this.setupActiveSection();
         this.setupBackToTopButton();
         this.setupScrollEffects();
+        this.setupTypewriterAnimation();
         this.setupProjectFilter();
     }
 
@@ -241,6 +242,49 @@ class PortfolioApp {
         }, 100);
     }
 }
+
+PortfolioApp.prototype.setupTypewriterAnimation = function() {
+    const target = document.getElementById('typewriter-text');
+    if (!target) return;
+
+    const roles = ['Virtual Assistant', 'Graphic Designer', 'Video Editor'];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    const type = () => {
+        const currentRole = roles[roleIndex];
+        let text = '';
+
+        if (isDeleting) {
+            text = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            text = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        target.textContent = text;
+
+        let typeSpeed = 150;
+        if (isDeleting) {
+            typeSpeed /= 3; // Backspace faster
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            typeSpeed = 1000; // Pause at the end of the word
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typeSpeed = 500; // Pause before typing next word
+        }
+
+        setTimeout(type, typeSpeed);
+    };
+
+    type();
+};
 
 let appInstance;
 document.addEventListener('DOMContentLoaded', () => {

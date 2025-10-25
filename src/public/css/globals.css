@@ -51,6 +51,11 @@
        @apply absolute block rounded-full bg-primary-500/10 dark:bg-primary-400/10;
        animation: float 15s infinite linear;
    }
+
+   .typewriter-cursor {
+       animation: blink 1s step-end infinite;
+       margin-left: 2px;
+   }
 }
 
 @layer utilities {
@@ -64,5 +69,10 @@
         50% { transform: translate(-10px, 0px) rotate(180deg); }
         75% { transform: translate(10px, 20px) rotate(270deg); }
         100% { transform: translate(0, 0) rotate(360deg); }
+    }
+
+    @keyframes blink {
+        from, to { color: transparent }
+        50% { color: inherit }
     }
 }
