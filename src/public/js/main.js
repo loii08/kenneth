@@ -180,7 +180,7 @@ PortfolioApp.prototype.setupTypewriterAnimation = function() {
     const target = document.getElementById('typewriter-text');
     if (!target) return;
 
-    const roles = ['Virtual Assistant', 'Graphic Designer', 'Video Editor', 'Web Designer'];
+    const roles = ['Information Technology Professional', 'Web Developer', 'Tech Enthusiast', 'Problem Solver'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

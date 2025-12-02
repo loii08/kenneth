@@ -23,7 +23,7 @@ router.post('/send-email', async (req, res) => {
     const { data, error } = await resend.emails.send({
       from: 'Portfolio Contact Form <onboarding@resend.dev>',
       to: ['kenneth.irvinb@gmail.com'],
-      subject: `New Message from ${name} via Portfolio`,
+      subject: `Message from ${name} via Portfolio`,
       reply_to: email,
       html: `
         <p>You have a new contact form submission:</p>
